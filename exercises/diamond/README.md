@@ -51,6 +51,9 @@ E·······E
 ···B·B···
 ····A····
 ```
+
+
+
 ## Source
 
 Seb Rose [http://claysnow.co.uk/recycling-tests-in-tdd/](http://claysnow.co.uk/recycling-tests-in-tdd/)
