@@ -12,6 +12,22 @@ class AnagramTest {
 
     @Ignore
     @Test
+    fun detectsSimpleAnagram() {
+        val detector = Anagram("ant")
+        val anagram = detector.match(listOf("tan", "stand", "at"))
+        assertEquals(setOf("tan"), anagram)
+    }
+
+    @Ignore
+    @Test
+    fun doesNotDetectFalsePositives() {
+        val detector = Anagram("galea")
+        val anagrams = detector.match(listOf("eagle"))
+        assertEquals(emptySet(), anagrams)
+    }
+
+    @Ignore
+    @Test
     fun detectsTwoAnagrams() {
         val detector = Anagram("master")
         val anagrams = detector.match(listOf("stream", "pigeon", "maters"))
@@ -27,7 +43,7 @@ class AnagramTest {
 
     @Ignore
     @Test
-    fun detectsAnagram() {
+    fun detectsLongerAnagram() {
         val detector = Anagram("listen")
         val anagrams = detector.match(listOf("enlists", "google", "inlets", "banana"))
         assertEquals(setOf("inlets"), anagrams)
@@ -39,6 +55,14 @@ class AnagramTest {
         val detector = Anagram("allergy")
         val anagrams = detector.match(listOf("gallery", "ballerina", "regally", "clergy", "largely", "leading"))
         assertEquals(setOf("gallery", "largely", "regally"), anagrams)
+    }
+
+    @Ignore
+    @Test
+    fun doesNotDetectIdenticalWordAsAnagram() {
+        val detector = Anagram("corn")
+        val anagrams = detector.match(listOf("corn", "dark", "Corn", "rank", "CORN", "cron", "park"))
+        assertEquals(setOf("cron"), anagrams)
     }
 
     @Ignore
@@ -74,6 +98,14 @@ class AnagramTest {
 
     @Ignore
     @Test
+    fun doesNotDetectIdenticalWordWithMixedCasingAsAnagram() {
+        val detector = Anagram("banana")
+        val anagrams = detector.match(listOf("Banana"))
+        assertEquals(emptySet(), anagrams)
+    }
+
+    @Ignore
+    @Test
     fun doesNotDetectAnAnagramIfTheOriginalWordIsRepeated() {
         val detector = Anagram("go")
         val anagrams = detector.match(listOf("go Go GO"))
@@ -95,4 +127,5 @@ class AnagramTest {
         val anagrams = detector.match(listOf("Banana"))
         assertEquals(emptySet(), anagrams)
     }
+
 }
