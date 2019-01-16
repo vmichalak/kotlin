@@ -29,6 +29,14 @@ class AcronymTest {
 
     @Ignore
     @Test
+    fun fromAllCapsWord() {
+        val phrase = "PHP: Hypertext Preprocessor"
+        val expected = "PHP"
+        assertEquals(expected, Acronym.generate(phrase))
+    }
+
+    @Ignore
+    @Test
     fun fromNonAcronymAllCapsWord() {
         val phrase = "GNU Image Manipulation Program"
         val expected = "GIMP"
@@ -43,19 +51,4 @@ class AcronymTest {
         assertEquals(expected, Acronym.generate(phrase))
     }
 
-    @Ignore
-    @Test
-    fun fromVeryLongAbbreviation() {
-        val phrase = "Rolling On The Floor Laughing So Hard That My Dogs Came Over And Licked Me"
-        val expected = "ROTFLSHTMDCOALM"
-        assertEquals(expected, Acronym.generate(phrase))
-    }
-
-    @Ignore
-    @Test
-    fun fromConsecutiveDelimiters() {
-        val phrase = "Something - I made up from thin air"
-        val expected = "SIMUFTA"
-        assertEquals(expected, Acronym.generate(phrase))
-    }
 }
