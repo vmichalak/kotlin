@@ -8,7 +8,7 @@ In addition to the exercism CLI and your favorite text editor, practicing with E
 Choose your operating system:
 
 * [Windows](#windows)
-* [macOS](#macos)
+* [Mac OS X](#mac-os-x)
 * [Linux](#linux)
 
 ... or ...
@@ -52,9 +52,9 @@ To get started, see "[Running the Tests](http://exercism.io/languages/kotlin/tes
 
 ----
 
-# macOS
+# Mac OS X
 
-Below are instructions for install using the most common method - using Homebrew.  If you'd rather, you can also [install on macOS without Homebrew](#installing-on-macos-without-homebrew).
+Below are instructions for install using the most common method - using Homebrew.  If you'd rather, you can also [install on OS X without Homebrew](#installing-on-mac-os-x-without-homebrew).
 
 ## Installing
 
@@ -154,7 +154,7 @@ To get started, see "[Running the Tests](http://exercism.io/languages/kotlin/tes
 # Install Manually
 
 * [Installing on Windows manually](#installing-on-windows-manually)
-* [Installing on macOS without Homebrew](#installing-on-macos-without-homebrew)
+* [Installing on Mac OS X without Homebrew](#installing-on-mac-os-x-without-homebrew)
 * [Installing on Linux without a package manager](#installing-on-linux-without-a-package-manager)
 
 ----
@@ -179,9 +179,9 @@ To get started, see "[Running the Tests](http://exercism.io/languages/kotlin/tes
 
 ----
 
-## Installing on macOS without Homebrew
+## Installing on Mac OS X without Homebrew
 
-*NOTE: these instructions are intended for experienced macOS users.  Unless you specifically do not want to use a package manager, we highly recommend using the Homebrew-based installation instructions, [above](#macos).*
+*NOTE: these instructions are intended for experienced Mac OS X users.  Unless you specifically do not want to use a package manager, we highly recommend using the Homebrew-based installation instructions, [above](#mac-os-x).*
 
 1. Install the JDK:
    1. Download "**Java Platform (JDK)**" from [Oracle OTN](http://www.oracle.com/technetwork/java/javase/downloads/index.html).
