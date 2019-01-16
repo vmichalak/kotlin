@@ -4,8 +4,7 @@ jdk:
   - oraclejdk8
 env:
   - SCRIPT=bin/unit-tests.sh
-
-  - SCRIPT=bin/run-journey-test-from-ci.sh
+  - SCRIPT=bin/journey-test.sh
 
 # http://docs.travis-ci.com/user/migrating-from-legacy
 sudo: false
