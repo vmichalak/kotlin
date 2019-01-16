@@ -82,9 +82,4 @@ class LuhnTest {
         assertTrue(Luhn.isValid("091"))
     }
 
-    @Ignore
-    @Test
-    fun stringsWithNonDigitsIsInvalid() {
-        assertFalse(Luhn.isValid(":9"))
-    }
 }
