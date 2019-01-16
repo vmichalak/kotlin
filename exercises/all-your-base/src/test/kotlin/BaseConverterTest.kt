@@ -172,7 +172,7 @@ class BaseConverterTest {
         expectedException.expect(IllegalArgumentException::class.java)
         expectedException.expectMessage("Bases must be at least 2.")
 
-        BaseConverter(1, intArrayOf(0))
+        BaseConverter(1, intArrayOf())
     }
 
     @Ignore
@@ -190,7 +190,7 @@ class BaseConverterTest {
         expectedException.expect(IllegalArgumentException::class.java)
         expectedException.expectMessage("Bases must be at least 2.")
 
-        BaseConverter(-2, intArrayOf(1))
+        BaseConverter(-2, intArrayOf())
     }
 
     @Ignore
@@ -243,4 +243,5 @@ class BaseConverterTest {
 
         baseConverter.convertToBase(-7)
     }
+
 }
